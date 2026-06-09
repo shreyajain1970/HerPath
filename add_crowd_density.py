@@ -60,7 +60,7 @@ print(f"Unmatched: {joined['ward_name_osm'].isna().sum()}")
 
 # ── Merge crowd density from BBMP ward data ───────────────────
 # Normalise ward names for matching
-wards['ward_name_clean'] = wards['ward_name'].str.strip().str.lower()
+wards['ward_name_clean'] = wards['ward-name'].str.strip().str.lower()
 joined['ward_name_clean'] = joined['ward_name_osm'].str.strip().str.lower()
 
 merged = joined.merge(
